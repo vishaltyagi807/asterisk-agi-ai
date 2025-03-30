@@ -1,10 +1,11 @@
 plugins {
     kotlin("jvm") version "2.1.10"
     kotlin("plugin.serialization") version "2.1.10"
+    application
 }
 
 group = "community.esz"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -30,6 +31,10 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:realtime-kt")
     implementation("io.ktor:ktor-client-apache5:3.1.1")
 
+}
+
+application {
+    mainClass.set("MainKt")
 }
 
 tasks.test {
